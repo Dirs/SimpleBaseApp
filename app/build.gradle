@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
-
+apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -38,13 +38,13 @@ dependencies {
     //dagger2基本库之一
     implementation 'com.google.dagger:dagger:2.12'
     //dagger2基本库之二
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.12'
+    kapt 'com.google.dagger:dagger-compiler:2.12'
 
     //dagger2 for android 库之一
     implementation 'com.google.dagger:dagger-android:2.12'
     //dagger2 for android 库之二
     implementation 'com.google.dagger:dagger-android-support:2.12'
     //dagger2 for android 库之三
-    annotationProcessor 'com.google.dagger:dagger-android-processor:2.12'
+    kapt 'com.google.dagger:dagger-android-processor:2.12'
 }
 

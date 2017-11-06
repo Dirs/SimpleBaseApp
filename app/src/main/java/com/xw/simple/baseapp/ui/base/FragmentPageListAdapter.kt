@@ -5,9 +5,10 @@ import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 
 /**
- * Created by XWCHQ on 2017/11/6-16:18
+ * Created by XWCHQ on 2017/11/6-18:54
  */
-open class FragmentPageListAdapter(private val fm:FragmentManager, private val fragmentList:List<FragmentBean> = ArrayList()):FragmentPagerAdapter(fm),List<FragmentBean> by fragmentList{
+
+class FragmentPageListAdapter (fm: FragmentManager, val fragmentList: List<FragmentBean> = ArrayList()) : FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
         return fragmentList[position].fragment

@@ -2,7 +2,7 @@ package com.xw.simple.baseapp.ui.home
 
 import android.os.Bundle
 import com.xw.simple.baseapp.R
-import com.xw.simple.baseapp.dagger.base.DaggerBaseActivity
+import com.xw.simple.baseapp.dagger.base.DaggerBaseFragmentActivity
 import com.xw.simple.baseapp.ui.base.FragmentPageListAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
@@ -11,7 +11,8 @@ import javax.inject.Inject
  * Created by XWCHQ on 2017/11/6-17:22
  */
 
-class MainActivity : DaggerBaseActivity() {
+class MainActivity : DaggerBaseFragmentActivity() {
+
     @Inject
     @JvmField
     var mPagerAdapter: FragmentPageListAdapter? = null

@@ -1,7 +1,7 @@
 package com.xw.simple.baseapp.api.retrofit
 
+import io.reactivex.Observable
 import okhttp3.ResponseBody
-import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -11,5 +11,5 @@ import retrofit2.http.Query
 
 interface MobApiService{
     @GET("weather/citys")
-    abstract fun getWeatherCitys(@Query("key") appKey: String): Call<ResponseBody>
+    abstract fun getWeatherCitys(@Query("key") appKey: String): Observable<ResponseBody>
 }
